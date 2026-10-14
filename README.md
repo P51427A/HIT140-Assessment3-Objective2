@@ -1,5 +1,7 @@
 # HIT140 Assessment 3 – Objective 2
 
+## Predictive Modelling of Match Goal Difference and Team Goal Scoring in the FIFA World Cup 2026
+
 Darwin Group 8
 
 - Pranjal Awasthi (S405821)
@@ -15,6 +17,19 @@ Objective 2 contains two regression tasks using FIFA World Cup 2026 data and pre
 - **Task 2.2:** predict **goals scored by a team in a specific match** using 208 team-match observations.
 
 All final explanatory variables are based on information available before kick-off. The final Task 2.2 workflow uses grouped validation by `match_id` so both team rows from the same match remain in the same split.
+
+---
+
+## Marker guide
+
+For final assessment outputs, please use scripts 29–39 and the final datasets listed below.
+
+Scripts 00–28 are retained to document the development process, feature engineering, alternative specifications and rejected experiments.
+
+The main final modelling files are:
+- Task 2.1: `31_task2_1_final_validation.py`
+- Task 2.2: `33_task2_2_final_validation.py`
+- Model comparisons: `29_task2_1_algorithm_comparison.py` and `32_task2_2_algorithm_comparison.py`
 
 ---
 
@@ -145,6 +160,16 @@ MLR performed better than the competing regression algorithms under grouped cros
 
 ---
 
+## Methodological notes
+
+- Task 2.1 uses absolute goal difference as the response.
+- The Task 2.1 host-advantage variable is signed and therefore remains dependent on the recorded Team A/B ordering.
+- Task 2.2 uses grouped validation by `match_id` to keep both rows from the same fixture in the same split.
+- Recent-history features use only information available before the target match.
+- The final reported metrics correspond to the final datasets and scripts listed above.
+
+---
+
 ## Suggested final run order
 
 ```bash
@@ -160,3 +185,5 @@ python 37_export_task2_2_holdout_predictions.py
 python 38_create_combined_algorithm_comparison.py
 python 39_create_task2_2_algorithm_comparison_png.py
 ```
+
+Earlier numbered scripts are development experiments and are not required to reproduce the final reported results.

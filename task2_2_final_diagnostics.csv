@@ -1,0 +1,8 @@
+diagnostic,value
+OLS R2,0.2870155813613855
+Adjusted R2,0.25835289116485827
+Shapiro-Wilk statistic,0.9497832536398745
+Shapiro-Wilk p-value,1.1711819704573969e-06
+Breusch-Pagan statistic,9.256489655197923
+Breusch-Pagan p-value,0.32112310376158865
+Maximum VIF,3.378310251449613
